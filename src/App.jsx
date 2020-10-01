@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ThemeProvider } from 'emotion-theming';
-
+import { useDarkMode } from './hooks/userDarkMode';
 import { lightTheme, darkTheme } from './utils/theme';
 // Components
 import Header from './components/Header';
 import GlobalStyles from './utils/GlobalStyles';
-import { useDarkMode } from './hooks/userDarkMode';
+import MainWrapper from './layouts/MainWrapper';
 
 function App() {
   const [themeColor, toggleThemeColor, componentMounted] = useDarkMode();
+  const [headerHeight, setHeaderHeight] = useState(0);
 
-  if (!componentMounted) {
-    return <div />;
-  }
+  const controlHeaderHeight = (header) => {
+    setHeaderHeight(header);
+  };
 
   return (
-    <ThemeProvider theme={themeColor === 'light' ? lightTheme : darkTheme}>
-      <GlobalStyles />
-      <Header toggleThemeColor={toggleThemeColor} />
-    </ThemeProvider>
+    componentMounted && (
+      <ThemeProvider theme={themeColor === 'light' ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <Header
+          toggleThemeColor={toggleThemeColor}
+          controlHeaderHeight={controlHeaderHeight}
+        />
+        <MainWrapper headerHeight={headerHeight} />
+      </ThemeProvider>
+    )
   );
 }
 

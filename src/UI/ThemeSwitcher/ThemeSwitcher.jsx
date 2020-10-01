@@ -30,6 +30,7 @@ const ThemeSwitcher = ({ toggleThemeColor }) => {
         onChange={themeContainerHandle}
         ref={inputRef}
         onBlur={onBlurCheckbox}
+        onFocus={() => setFocused(true)}
       />
     </ThemeSwitcherStyled>
   );

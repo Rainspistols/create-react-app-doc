@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import Logo from '../UI/Logo/Logo';
 import NavMenu from './NavMenu';
 import ThemeSwitcher from '../UI/ThemeSwitcher/ThemeSwitcher';
 import Search from '../UI/Search/Search';
 
-const Header = ({ toggleThemeColor }) => {
+const Header = ({ toggleThemeColor, controlHeaderHeight }) => {
+  const headerRef = useRef();
+
+  useEffect(() => {
+    controlHeaderHeight(headerRef.current.clientHeight);
+  }, [controlHeaderHeight]);
+
   return (
-    <StyledHeader>
+    <StyledHeader ref={headerRef}>
       <Logo />
       <NavMenu />
       <ThemeSwitcher toggleThemeColor={toggleThemeColor} />
@@ -18,6 +24,7 @@ const Header = ({ toggleThemeColor }) => {
 
 const StyledHeader = styled.header`
   position: fixed;
+  z-index: 5;
 
   box-sizing: border-box;
   width: 100%;
