@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from '@emotion/styled/macro';
 import EditPageAndUpdated from '../UI/EditPageAndUpdated';
 import ChapterTitle from '../UI/ChapterTitle';
@@ -17,6 +17,9 @@ const ChapterWrapper = ({
   nextHref,
 }) => {
   const chapterContentRef = useRef();
+  useEffect(() => {
+    document.title = chapterName;
+  }, [chapterName]);
 
   return (
     <ChapterWrapperStyled>

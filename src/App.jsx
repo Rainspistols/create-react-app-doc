@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import { useDarkMode } from './hooks/userDarkMode';
 import { lightTheme, darkTheme } from './utils/theme';
+import { BrowserRouter as Router } from 'react-router-dom';
 // Components
 import Header from './components/Header';
 import GlobalStyles from './utils/GlobalStyles';
 import MainWrapper from './layouts/MainWrapper';
+import Footer from './components/Footer';
 
 function App() {
   const [themeColor, toggleThemeColor, componentMounted] = useDarkMode();
@@ -19,11 +21,14 @@ function App() {
     componentMounted && (
       <ThemeProvider theme={themeColor === 'light' ? lightTheme : darkTheme}>
         <GlobalStyles />
-        <Header
-          toggleThemeColor={toggleThemeColor}
-          controlHeaderHeight={controlHeaderHeight}
-        />
-        <MainWrapper headerHeight={headerHeight} />
+        <Router>
+          <Header
+            toggleThemeColor={toggleThemeColor}
+            controlHeaderHeight={controlHeaderHeight}
+          />
+          <MainWrapper headerHeight={headerHeight} />
+          <Footer />
+        </Router>
       </ThemeProvider>
     )
   );

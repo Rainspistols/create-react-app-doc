@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled/macro';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import AboutDocs from './chapters/AboutDocs';
 import ChapterWrapper from '../layouts/ChapterWrapper';
 
@@ -31,7 +31,7 @@ const Main = () => {
     <MainStyled>
       <ChapterWrapper {...dataForCertainChapter}>
         <Switch>
-          <Route path='/documentation-intro'>
+          <Route path='/documentation-intro/'>
             <AboutDocs />
           </Route>
 
@@ -40,6 +40,10 @@ const Main = () => {
               <h1>test1</h1>
               <h2>test2</h2>
             </>
+          </Route>
+
+          <Route path='/'>
+            <Redirect to='/getting-started/' />
           </Route>
         </Switch>
       </ChapterWrapper>

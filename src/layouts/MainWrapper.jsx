@@ -2,15 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled/macro';
 import Main from '../components/Main';
 import LeftNav from '../components/LeftNav';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 const MainWrapper = ({ headerHeight }) => {
   return (
     <MainWrapperStyled headerHeight={headerHeight}>
-      <Router>
-        <LeftNav headerHeight={headerHeight} />
-        <Main />
-      </Router>
+      <LeftNav headerHeight={headerHeight} />
+      <Main />
     </MainWrapperStyled>
   );
 };

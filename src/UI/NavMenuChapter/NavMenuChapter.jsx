@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from '@emotion/styled/macro';
 import { Link } from 'react-router-dom';
 
@@ -7,9 +7,12 @@ import { useLocation } from 'react-router-dom';
 const NavMenuChapter = ({ chapterName, href }) => {
   const location = useLocation();
 
+  const linkRef = useRef();
+
   return (
     <NavMenuChapterStyled>
       <Link
+        ref={linkRef}
         to={href}
         className={href === location.pathname ? 'active-chapter' : ''}
       >
