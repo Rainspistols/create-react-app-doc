@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const ChapterTitle = ({ children }) => {
   return <ChapterTitleStyled>{children}</ChapterTitleStyled>;

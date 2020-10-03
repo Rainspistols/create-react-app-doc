@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 import { Link } from 'react-router-dom';
 
 const ChapterPagination = ({
@@ -33,7 +33,7 @@ const ChapterPagination = ({
 
 const ChapterPaginationStyled = styled.div`
   ${({ theme }) => theme.flex.between};
-  color: ${({theme})=>theme.color.text};
+  color: ${({ theme }) => theme.color.text};
 
   .paginationContainer {
     flex-grow: 1;

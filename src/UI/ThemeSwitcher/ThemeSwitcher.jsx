@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const ThemeSwitcher = ({ toggleThemeColor }) => {
   const [isFocused, setFocused] = useState(false);

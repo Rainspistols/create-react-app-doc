@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 import NavMenuChapter from '../NavMenuChapter/NavMenuChapter';
 
 import { useLocation } from 'react-router-dom';
@@ -52,6 +52,7 @@ const NavMenuGroupStyled = styled.li`
 
   .chapters-list {
     margin-left: 16px;
+    color: ${({ theme }) => theme.color.leftNav};
   }
 
   .group.active-group {
@@ -80,8 +81,6 @@ const NavMenuGroupStyled = styled.li`
 
       height: 20px;
       width: 20px;
-
-      color: rgb(218, 221, 225);
 
       background-image: ${({ theme }) => theme.color.navLeftSvg};
       background-size: 32px 32px;

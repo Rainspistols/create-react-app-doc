@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 import NavMenuGroup from '../UI/NavMenuGroup/NavMenuGroup';
 
 const LeftNav = ({ headerHeight }) => {
@@ -39,6 +39,7 @@ const LeftNav = ({ headerHeight }) => {
 
 const LeftNavStyled = styled.aside`
   position: sticky;
+  top: 58px;
 
   display: inline-block;
   min-width: 300px;
@@ -46,8 +47,6 @@ const LeftNavStyled = styled.aside`
   height: calc(100vh - ${(props) => props.headerHeight + 'px'});
 
   scrollbar-width: auto;
-
-  border-right: ${({ theme }) => theme.color.navLeftBorder};
 
   .groups-list {
     padding: 8px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 const ChapterH2 = ({ children, anchorId }) => {
   return (
@@ -7,12 +7,19 @@ const ChapterH2 = ({ children, anchorId }) => {
       <a
         className='hash-link'
         href={'#' + anchorId}
-        id={anchorId}
         title='Direct link to heading'
       >
         #
       </a>
-      {children}
+      <a
+        id={anchorId}
+        className='anchor visually-hidden'
+        aria-label={anchorId}
+        href='/#'
+      >
+        {anchorId}
+      </a>
+      <span className='chapter-title'>{children}</span>
     </ChapterH2Styled>
   );
 };
@@ -48,6 +55,10 @@ const ChapterH2Styled = styled.h2`
     :focus {
       text-decoration: underline;
     }
+  }
+
+  .anchor {
+    top: -60px;
   }
 `;
 

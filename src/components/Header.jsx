@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 import Logo from '../UI/Logo/Logo';
 import NavMenu from './NavMenu';
 import ThemeSwitcher from '../UI/ThemeSwitcher/ThemeSwitcher';
@@ -25,6 +25,7 @@ const Header = ({ toggleThemeColor, controlHeaderHeight }) => {
 const StyledHeader = styled.header`
   position: fixed;
   z-index: 5;
+  top: 0;
 
   box-sizing: border-box;
   width: 100%;
