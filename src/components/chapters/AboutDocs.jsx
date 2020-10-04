@@ -50,6 +50,6 @@ const AboutDocs = () => {
   );
 };
 
-const AboutDocsStyled = styled.section``;
+const AboutDocsStyled = styled.article``;
 
 export default AboutDocs;

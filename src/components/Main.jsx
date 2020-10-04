@@ -3,6 +3,7 @@ import styled from '@emotion/styled/macro';
 import { Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import AboutDocs from './chapters/AboutDocs';
 import ChapterWrapper from '../layouts/ChapterWrapper';
+import GettingStarted from './chapters/GettingStarted';
 
 const Main = () => {
   const location = useLocation();
@@ -20,11 +21,20 @@ const Main = () => {
     },
     {
       slug: '/getting-started/',
+      updatedBy: 'Lewis Llobera',
+      updatedDate: '2/13/2020',
+      chapterName: 'О документации',
+      href:
+        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/documentation-intro.md',
+      nextTitle: 'Структура папок',
+      nextHref: 'folder-structure',
+      previousTitle: 'О документации',
+      previousHref: 'documentation-intro',
     },
   ];
 
   const dataForCertainChapter = chapterData.find(
-    (item, index) => item.slug === location.pathname
+    (item) => item.slug === location.pathname
   );
 
   return (
@@ -36,13 +46,10 @@ const Main = () => {
           </Route>
 
           <Route path='/getting-started/'>
-            <>
-              <h1>test1</h1>
-              <h2>test2</h2>
-            </>
+            <GettingStarted />
           </Route>
 
-          <Route path='/'>
+          <Route path='/' exact>
             <Redirect to='/getting-started/' />
           </Route>
         </Switch>

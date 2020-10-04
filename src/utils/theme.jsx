@@ -24,6 +24,16 @@ const defaultThemeProps = {
       lineHeight: '25px',
     },
   },
+  defaultStyles: {
+    code: {
+      padding: '3.2px 6.4px',
+      color: 'rgb(245, 246, 247)',
+      fontSize: '14px',
+      lineHeight: '21px',
+      backgroundColor: 'rgb(28, 30, 33)',
+      borderRadius: '5px',
+    },
+  },
 };
 
 export const lightTheme = {

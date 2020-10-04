@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled/macro';
 
-const ChapterH2 = ({ children, anchorId }) => {
+const ChapterH2 = ({ children, anchorId, as = 'h2' }) => {
   return (
-    <ChapterH2Styled>
+    <ChapterH2Styled as={as}>
       <a
         className='hash-link'
         href={'#' + anchorId}
@@ -60,6 +60,8 @@ const ChapterH2Styled = styled.h2`
   .anchor {
     top: -60px;
   }
+
+  
 `;
 
 export default ChapterH2;

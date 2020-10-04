@@ -8,6 +8,10 @@ const ChapterParagraph = ({ children }) => {
 const ChapterParagraphStyled = styled.p`
   ${({ theme }) => theme.typography.normal};
   margin-bottom: 24px;
+
+  code {
+    ${({ theme }) => theme.defaultStyles.code};
+  }
 `;
 
 export default ChapterParagraph;

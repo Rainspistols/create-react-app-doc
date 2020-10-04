@@ -12,7 +12,7 @@ const ChapterPagination = ({
     <ChapterPaginationStyled>
       <div className='paginationContainer paginationContainer-previous'>
         {previousHref && previousTitle && (
-          <Link href={'/' + previousHref + '/'} className='pagination-link'>
+          <Link to={'/' + previousHref + '/'} className='pagination-link'>
             <p>Предыдущий раздел</p>
             <p className='chapterTitle'>{previousTitle}</p>
           </Link>
