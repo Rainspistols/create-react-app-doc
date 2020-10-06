@@ -63,7 +63,7 @@ const ChapterNavigationStyled = styled.nav`
 
   overflow-y: auto;
 
-  height: calc(100vh - 78px);
+  height: 100%;
   width: 25%;
   padding: 20px 0 0 16px;
 

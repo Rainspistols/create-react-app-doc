@@ -24,6 +24,8 @@ const ChapterH2 = ({ children, anchorId, as = 'h2' }) => {
   );
 };
 
+
+
 const ChapterH2Styled = styled.h2`
   position: relative;
 
@@ -60,8 +62,6 @@ const ChapterH2Styled = styled.h2`
   .anchor {
     top: -60px;
   }
-
-  
 `;
 
 export default ChapterH2;

@@ -1,55 +1,49 @@
 import React from 'react';
-import styled from '@emotion/styled/macro';
-import ChapterParagraph from '../../UI/ChapterParagraph';
 import ChapterH2 from '../../UI/ChapterH2';
-import ChapterLink from '../../UI/ChapterLink';
+import PageContent from '../../layouts/PageContent';
 
 const AboutDocs = () => {
   return (
-    <AboutDocsStyled>
-      <ChapterParagraph>
-        Добро пожаловать в Create React App документацию
-      </ChapterParagraph>
+    <PageContent>
+      <p>Добро пожаловать в Create React App документацию</p>
       <ChapterH2 anchorId='navigation'>Навигация</ChapterH2>
-      <ChapterParagraph>
+      <p>
         Вы можете найти разные темы в содержании. На desktop устройствах вы
         должны увидеть это на левой боковой панели. На мобильном устройстве вы
         должны увидеть это после нажатия значка со стрелками в верхнем левом
         углу.
-      </ChapterParagraph>
+      </p>
       <ChapterH2 anchorId='looking-for-react-docs'>
         Ищете документацию для React?
       </ChapterH2>
-      <ChapterParagraph>
+      <p>
         Документация для React находится на отдельном сайте:{' '}
-        <ChapterLink href='https://reactjs.org/'>reactjs.org</ChapterLink>.
-      </ChapterParagraph>
-      <ChapterParagraph>Этот сайт только об Create React App.</ChapterParagraph>
+        <a href='https://reactjs.org/'>reactjs.org</a>.
+      </p>
+      <p>Этот сайт только об Create React App.</p>
       <ChapterH2 anchorId='something-missing'>Чего то не хватает?</ChapterH2>
-      <ChapterParagraph>
+      <p>
         Если у вас есть идеи для других инструкций «Как сделать», которые должны
         быть на этой странице,{' '}
-        <ChapterLink href='https://github.com/facebook/create-react-app/issues'>
+        <a href='https://github.com/facebook/create-react-app/issues'>
           дайте нам знать
-        </ChapterLink>{' '}
+        </a>{' '}
         или{' '}
-        <ChapterLink href='https://github.com/facebook/create-react-app/tree/master/docusaurus/docs'>
+        <a href='https://github.com/facebook/create-react-app/tree/master/docusaurus/docs'>
           поделитесь ими!
-        </ChapterLink>
-      </ChapterParagraph>
+        </a>
+      </p>
 
       <ChapterH2 anchorId='feedback'>Обратная связь</ChapterH2>
-      <ChapterParagraph>
+      <p>
         Мы всегда открыты для{' '}
-        <ChapterLink href='https://github.com/facebook/create-react-app/issues'>
+        <a href='https://github.com/facebook/create-react-app/issues'>
           ваших пожеланий
-        </ChapterLink>
+        </a>
         .
-      </ChapterParagraph>
-    </AboutDocsStyled>
+      </p>
+    </PageContent>
   );
 };
-
-const AboutDocsStyled = styled.article``;
 
 export default AboutDocs;

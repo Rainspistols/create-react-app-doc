@@ -34,6 +34,7 @@ const ChapterPagination = ({
 const ChapterPaginationStyled = styled.div`
   ${({ theme }) => theme.flex.between};
   color: ${({ theme }) => theme.color.text};
+  margin: 32px 0;
 
   .paginationContainer {
     flex-grow: 1;
