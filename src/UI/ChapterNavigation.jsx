@@ -4,52 +4,61 @@ import { useLocation } from 'react-router-dom';
 
 const ChapterNavigation = ({ chapterContentRef }) => {
   const location = useLocation();
-  const [dataNavH, setDataNavH] = useState();
-  const [dataNavLink, setDataNavLink] = useState();
   const [activeNavLink, setActiveNavLink] = useState();
-
-  const test = useCallback(() => {
-    dataNavH &&
-      setActiveNavLink(
-        [...dataNavH].find((item) => item.getBoundingClientRect().top - 58 > 0)
-      );
-  }, [dataNavH]);
+  const [dataNav, setDataNav] = useState();
 
   useEffect(() => {
-    test();
-    window.addEventListener('scroll', test);
+    const allH = chapterContentRef.current.querySelectorAll('.chapter-title');
+    setDataNav(
+      [...allH].map((item) => ({
+        innerHTML: item.querySelector('.title').innerHTML,
+        textContent: item.querySelector('.title').textContent,
+        tag: item.dataset.tag,
+        linkToAnchor: item.dataset.linkToAnchor,
+        node: item,
+      }))
+    );
+  }, [location.pathname, chapterContentRef]);
+
+  const checkWhatLinkIsVisible = useCallback(() => {
+    dataNav &&
+      setActiveNavLink(
+        dataNav.find((item) => item.node.getBoundingClientRect().top - 58 > 0)
+      );
+  }, [dataNav]);
+
+  useEffect(() => {
+    checkWhatLinkIsVisible();
+    window.addEventListener('scroll', checkWhatLinkIsVisible);
 
     return () => {
-      window.removeEventListener('scroll', test);
+      window.removeEventListener('scroll', checkWhatLinkIsVisible);
     };
-  }, [dataNavH, test]);
-
-  useEffect(() => {
-    setDataNavH(chapterContentRef.current.querySelectorAll('.chapter-title'));
-    setDataNavLink(chapterContentRef.current.querySelectorAll('a.anchor'));
-  }, [location.pathname, chapterContentRef]);
+  }, [dataNav, checkWhatLinkIsVisible]);
 
   return (
     <ChapterNavigationStyled
       className='chapter-navigation'
-      onScroll={() => test()}
+      onScroll={checkWhatLinkIsVisible}
     >
       <ul>
-        {dataNavH &&
-          [...dataNavH].map((item, index) => (
-            <li key={index}>
-              <a
-                className={
-                  activeNavLink && activeNavLink.innerText === item.innerText
-                    ? 'link active-link'
-                    : 'link'
-                }
-                href={'#' + [...dataNavLink][index].id}
-              >
-                {item.innerText}
-              </a>
-            </li>
-          ))}
+        {dataNav &&
+          dataNav.map(
+            ({ innerHTML, textContent, tag, linkToAnchor }, index) => (
+              <li key={index} className={tag}>
+                <a
+                  className={
+                    activeNavLink &&
+                    activeNavLink.node.innerText === textContent
+                      ? 'link active-link'
+                      : 'link'
+                  }
+                  href={linkToAnchor}
+                  dangerouslySetInnerHTML={{ __html: innerHTML }}
+                />
+              </li>
+            )
+          )}
       </ul>
     </ChapterNavigationStyled>
   );
@@ -66,6 +75,7 @@ const ChapterNavigationStyled = styled.nav`
   height: 100%;
   width: 25%;
   padding: 20px 0 0 16px;
+  box-sizing: border-box;
 
   ul {
     border-left: ${({ theme }) => theme.color.navLeftBorder};
@@ -84,14 +94,25 @@ const ChapterNavigationStyled = styled.nav`
         color: ${({ theme }) => theme.defaultColor.green};
       }
     }
-  }
 
-  .link {
-    white-space: nowrap;
+    code {
+      ${({ theme }) => theme.defaultStyles.code};
+      ${({ theme }) => theme.styles.code};
+      font-size: inherit;
+      line-height: inherit;
+    }
   }
 
   .active-link {
     color: ${({ theme }) => theme.defaultColor.green};
+  }
+
+  .h3 {
+    padding-left: 20px;
+  }
+
+  .h4 {
+    padding-left: 40px;
   }
 `;
 

@@ -24,6 +24,22 @@ const LeftNav = ({ headerHeight }) => {
         },
       ],
     },
+    {
+      groupName: 'Разработка',
+      chapters: [
+        { name: 'Настройки редактора кода', href: '/editor-setup/' },
+        {
+          name: 'Разработка компонентов в изоляции',
+          href: '/developing-components-in-isolation/',
+        },
+        { name: 'Анализ размера пакета', href: '/analyzing-the-bundle-size/' },
+
+        {
+          name: 'Использование HTTPS в разработке',
+          href: '/using-https-in-development/',
+        },
+      ],
+    },
   ];
 
   return (

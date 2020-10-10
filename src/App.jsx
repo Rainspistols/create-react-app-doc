@@ -8,6 +8,7 @@ import Header from './components/Header';
 import GlobalStyles from './utils/GlobalStyles';
 import MainWrapper from './layouts/MainWrapper';
 import Footer from './components/Footer';
+import ScrollToTop from './hooks/ScrollToTop';
 
 function App() {
   const [themeColor, toggleThemeColor, componentMounted] = useDarkMode();
@@ -22,6 +23,7 @@ function App() {
       <ThemeProvider theme={themeColor === 'light' ? lightTheme : darkTheme}>
         <GlobalStyles />
         <Router>
+          <ScrollToTop />
           <Header
             toggleThemeColor={toggleThemeColor}
             controlHeaderHeight={controlHeaderHeight}

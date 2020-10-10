@@ -14,7 +14,7 @@ const ChapterPagination = ({
         {previousHref && previousTitle && (
           <Link to={'/' + previousHref + '/'} className='pagination-link'>
             <p>Предыдущий раздел</p>
-            <p className='chapterTitle'>{previousTitle}</p>
+            <p className='chapterTitle'>{'« ' + previousTitle}</p>
           </Link>
         )}
       </div>
@@ -23,7 +23,7 @@ const ChapterPagination = ({
         {nextHref && nextTitle && (
           <Link to={'/' + nextHref + '/'} className='pagination-link'>
             <p>Следующий раздел</p>
-            <p className='chapterTitle'>{nextTitle + '»'}</p>
+            <p className='chapterTitle'>{nextTitle + ' »'}</p>
           </Link>
         )}
       </div>
@@ -33,6 +33,7 @@ const ChapterPagination = ({
 
 const ChapterPaginationStyled = styled.div`
   ${({ theme }) => theme.flex.between};
+  align-items: stretch;
   color: ${({ theme }) => theme.color.text};
   margin: 32px 0;
 
@@ -52,13 +53,16 @@ const ChapterPaginationStyled = styled.div`
       padding: 16px;
       border-radius: 10px;
 
+      height: 100%;
+      box-sizing:border-box;
+
       border: ${({ theme }) => theme.color.navLeftBorder};
     }
 
     .chapterTitle {
       color: ${({ theme }) => theme.defaultColor.green};
       font-weight: 600;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.2;
       margin-top: 4px;
     }

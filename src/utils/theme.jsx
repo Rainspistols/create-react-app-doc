@@ -27,10 +27,8 @@ const defaultThemeProps = {
   defaultStyles: {
     code: {
       padding: '3.2px 6.4px',
-      color: 'rgb(245, 246, 247)',
       fontSize: '14px',
       lineHeight: '21px',
-      backgroundColor: 'rgb(28, 30, 33)',
       borderRadius: '5px',
     },
   },
@@ -54,6 +52,10 @@ export const lightTheme = {
       left: '1px',
       border: '1px solid #4d4d4d;',
     },
+    code: {
+      color: 'rgb(28, 30, 33)',
+      backgroundColor: 'rgb(245, 246, 247)',
+    }
   },
 };
 
@@ -75,5 +77,9 @@ export const darkTheme = {
       left: '27px',
       border: '1px solid #19ab27',
     },
+    code: {
+      color: 'rgb(245, 246, 247)',
+      backgroundColor: 'rgb(28, 30, 33)',
+    }
   },
 };

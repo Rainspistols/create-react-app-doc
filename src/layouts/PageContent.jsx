@@ -12,32 +12,8 @@ const PageContentStyled = styled.article`
 
     code {
       ${({ theme }) => theme.defaultStyles.code};
+      ${({ theme }) => theme.styles.code};
     }
-  }
-
-  a {
-    color: ${({ theme }) => theme.defaultColor.green};
-
-    cursor: pointer;
-
-    :hover,
-    :focus {
-      text-decoration: underline;
-    }
-  }
-
-  .code-block {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 24px;
-    padding: 16px;
-
-    font-size: 12px;
-    line-height: 17px;
-    color: rgb(191, 199, 213);
-
-    border-radius: 5px;
-    background-color: rgb(41, 45, 62);
   }
 
   blockquote {
@@ -51,6 +27,32 @@ const PageContentStyled = styled.article`
 
     code {
       ${({ theme }) => theme.defaultStyles.code};
+      ${({ theme }) => theme.styles.code};
+    }
+  }
+
+  .img-center {
+    margin: 0 auto;
+  }
+
+  ul,
+  ol,
+  li {
+    list-style: revert;
+    padding: revert;
+  }
+
+  ul,ol {
+    margin-bottom: 24px;
+
+    li {
+      ${({ theme }) => theme.typography.normal};
+      margin-bottom: 4px;
+
+      code {
+        ${({ theme }) => theme.defaultStyles.code};
+        ${({ theme }) => theme.styles.code};
+      }
     }
   }
 `;

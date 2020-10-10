@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from '@emotion/styled/macro';
 import EditPageAndUpdated from '../UI/EditPageAndUpdated';
-import ChapterTitle from '../UI/ChapterTitle';
+import ChapterMainTitle from '../UI/ChapterMainTitle';
 import ChapterPagination from '../UI/ChapterPagination';
 import ChapterNavigation from '../UI/ChapterNavigation';
 
@@ -24,7 +24,7 @@ const ChapterWrapper = ({
   return (
     <ChapterWrapperStyled>
       <div className='chapter-content' ref={chapterContentRef}>
-        <ChapterTitle>{chapterName}</ChapterTitle>
+        <ChapterMainTitle>{chapterName}</ChapterMainTitle>
         {children}
         <EditPageAndUpdated by={updatedBy} date={updatedDate} href={href} />
         <ChapterPagination

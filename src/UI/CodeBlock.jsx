@@ -51,20 +51,21 @@ const CodeBlock = ({ children }) => {
 const CodeBlockStyled = styled.div`
   position: relative;
 
-  .code-lines-wrap {
-    display: flex;
-    flex-direction: column;
-  }
-
   margin-bottom: 24px;
   padding: 16px;
 
   font-size: 12px;
   line-height: 17px;
   color: rgb(191, 199, 213);
+  font-weight: 600;
 
   border-radius: 5px;
   background-color: rgb(41, 45, 62);
+
+  .code-lines-wrap {
+    display: flex;
+    flex-direction: column;
+  }
 
   :hover .copy-btn,
   :focus .copy-btn {
