@@ -9,6 +9,12 @@ import AvailableScripts from './chapters/AvailableScripts';
 import SupportedBrowsersFeatures from './chapters/SupportedBrowsersFeatures';
 import UpdatingToNewReleases from './chapters/UpdatingToNewReleases';
 import EditorSetup from './chapters/EditorSetup';
+import DevelopingComponentsInIsolation from './chapters/DevelopingComponentsInIsolation';
+import AnalyzingTheBundleSize from './chapters/AnalyzingTheBundleSize';
+import UsingHttpsInDevelopment from './chapters/UsingHttpsInDevelopment';
+import AddingStylesheets from './chapters/AddingStylesheets';
+import AddingCSSModules from './chapters/AddingCSSModules';
+import AddingSassStylesheets from './chapters/AddingSassStylesheets';
 
 const Main = () => {
   const location = useLocation();
@@ -19,8 +25,7 @@ const Main = () => {
       updatedBy: 'Dan Abramov',
       updatedDate: '10/20/2018',
       chapterName: 'О документации',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/documentation-intro.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/documentation-intro.md',
       nextTitle: 'С чего начать?',
       nextHref: 'getting-started',
     },
@@ -29,8 +34,7 @@ const Main = () => {
       updatedBy: 'Lewis Llobera',
       updatedDate: '2/13/2020',
       chapterName: 'О документации',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/documentation-intro.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/documentation-intro.md',
       nextTitle: 'Структура папок',
       nextHref: 'folder-structure',
       previousTitle: 'О документации',
@@ -41,8 +45,7 @@ const Main = () => {
       updatedBy: 'Lewis Llobera',
       updatedDate: '2/13/2020',
       chapterName: 'Структура папки',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/folder-structure.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/folder-structure.md',
       nextTitle: 'Доступные скрипты',
       nextHref: 'available-scripts',
       previousTitle: 'О документации',
@@ -53,8 +56,7 @@ const Main = () => {
       updatedBy: 'Lewis Llobera',
       updatedDate: '2/13/2020',
       chapterName: 'Особенности поддерживаемых браузеров',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/available-scripts.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/available-scripts.md',
       nextTitle: 'Особенности поддерживаемых браузеров',
       nextHref: 'supported-browsers-features',
       previousTitle: 'Доступные скрипты',
@@ -65,8 +67,7 @@ const Main = () => {
       chapterName: 'Особенности поддерживаемых браузеров',
       updatedBy: 'Evan Grim',
       updatedDate: '1/16/2020',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/supported-browsers-features.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/supported-browsers-features.md',
       nextTitle: 'Обновление до новых версий',
       nextHref: 'updating-to-new-releases',
       previousTitle: 'Доступные скрипты',
@@ -77,20 +78,18 @@ const Main = () => {
       chapterName: 'Обновление до новых версий',
       updatedBy: 'Ben Carp',
       updatedDate: '1/20/2019',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/updating-to-new-releases.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/updating-to-new-releases.md',
       nextTitle: 'Настройка вашего редактора кода',
       nextHref: 'setting-up-your-editor',
       previousTitle: 'Особенности поддерживаемых браузеров',
       previousHref: 'supported-browsers-features',
     },
     {
-      slug: '/editor-setup/',
+      slug: '/setting-up-your-editor/',
       chapterName: 'Настройка редактора кода',
       updatedBy: 'Brody McKee',
       updatedDate: '3/1/2020',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/setting-up-your-editor.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/setting-up-your-editor.md',
       nextTitle: 'Разработка компонентов в изоляции',
       nextHref: 'developing-components-in-isolation',
       previousTitle: 'Обновление до новых версий',
@@ -106,15 +105,14 @@ const Main = () => {
       nextTitle: 'Анализ размера пакета',
       nextHref: 'analyzing-the-bundle-size',
       previousTitle: 'Настройка редактора кода',
-      previousHref: 'editor-setup',
+      previousHref: 'setting-up-your-editor',
     },
     {
       slug: '/analyzing-the-bundle-size/',
       chapterName: 'Анализ размера пакета',
       updatedBy: 'Ioannis Cherouvim',
       updatedDate: '2/22/2019',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/analyzing-the-bundle-size.md',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/analyzing-the-bundle-size.md',
       nextTitle: 'Использование HTTPS в разработке',
       nextHref: 'using-https-in-development',
       previousTitle: 'Разработка компонентов в изоляции',
@@ -125,18 +123,115 @@ const Main = () => {
       chapterName: 'Использование HTTPS в разработке',
       updatedBy: 'Kanitkorn Sujautra',
       updatedDate: '2/20/2020',
-      href:
-        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/using-https-in-development.md',
-      nextTitle: 'Использование HTTPS в разработке',
-      nextHref: 'using-https-in-development',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/using-https-in-development.md',
+      nextTitle: 'Добавление таблиц стилей',
+      nextHref: 'adding-a-stylesheet',
       previousTitle: 'Анализ размера пакета',
       previousHref: 'analyzing-the-bundle-size',
     },
+    {
+      slug: '/adding-a-stylesheet/',
+      chapterName: 'Добавление таблиц стилей',
+      updatedBy: 'Lewis Llobera',
+      updatedDate: '2/13/2020',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/adding-a-stylesheet.md',
+      nextTitle: 'Добавление модулей CSS',
+      nextHref: 'adding-a-css-modules-stylesheet',
+      previousTitle: 'Использование HTTPS в разработке',
+      previousHref: 'using-https-in-development',
+    },
+    {
+      slug: '/adding-a-css-modules-stylesheet/',
+      chapterName: 'Добавление модулей CSS',
+      updatedBy: 'Hardo',
+      updatedDate: '1/4/2019',
+      href:
+        'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/adding-a-css-modules-stylesheet.md',
+      nextTitle: 'Добавление таблиц стилей Sass',
+      nextHref: 'adding-a-sass-stylesheet',
+      previousTitle: 'Добавление таблиц стилей',
+      previousHref: 'adding-a-stylesheet',
+    },
+    {
+      slug: '/adding-a-sass-stylesheet/',
+      chapterName: 'Добавление таблиц стилей Sass',
+      updatedBy: 'Monish',
+      updatedDate: '3/24/2019',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/adding-a-sass-stylesheet.md',
+      nextTitle: 'Добавление CSS Reset',
+      nextHref: 'adding-css-reset',
+      previousTitle: 'Добавление модулей CSS',
+      previousHref: 'adding-a-css-modules-stylesheet',
+    },
+    {
+      slug: '/adding-css-reset/',
+      chapterName: 'Добавление CSS Reset',
+      updatedBy: 'Hrusikesh Panda',
+      updatedDate: '4/5/2019',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/adding-css-reset.md',
+      nextTitle: 'Постобработка CSS',
+      nextHref: 'post-processing-css',
+      previousTitle: 'Добавление таблиц стилей Sass',
+      previousHref: 'adding-a-sass-stylesheet',
+    },
+    {
+      slug: '/post-processing-css/',
+      chapterName: 'Постобработка CSS',
+      updatedBy: 'Endi',
+      updatedDate: '10/15/2019',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/post-processing-css.md',
+      nextTitle: 'Добавление изображений, шрифтов и файлов',
+      nextHref: 'adding-images-fonts-and-files',
+      previousTitle: 'Добавление CSS Reset',
+      previousHref: 'adding-css-reset',
+    },
+    {
+      slug: '/adding-images-fonts-and-files/',
+      chapterName: 'Добавление изображений, шрифтов и файлов',
+      updatedBy: 'Lewis Llobera',
+      updatedDate: '2/13/2020',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/adding-images-fonts-and-files.md',
+      nextTitle: 'Загрузка файлов .graphql',
+      nextHref: 'loading-graphql-files',
+      previousTitle: 'Постобработка CSS',
+      previousHref: 'post-processing-css',
+    },
+    {
+      slug: '/loading-graphql-files/',
+      chapterName: 'Загрузка файлов .graphql',
+      updatedBy: 'nagman',
+      updatedDate: '4/30/2019',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/loading-graphql-files.md',
+      nextTitle: 'Использование общей папки',
+      nextHref: 'using-the-public-folder',
+      previousTitle: 'Добавление изображений, шрифтов и файлов',
+      previousHref: 'adding-images-fonts-and-files',
+    },
+    {
+      slug: '/using-the-public-folder/',
+      chapterName: 'Использование общей папки',
+      updatedBy: 'nagman',
+      updatedDate: '4/30/2019',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/using-the-public-folder.md',
+      nextTitle: 'Разделение кода',
+      nextHref: 'code-splitting',
+      previousTitle: 'Загрузка файлов .graphql',
+      previousHref: 'loading-graphql-files',
+    },
+    {
+      slug: '/code-splitting/',
+      chapterName: 'Разделение кода',
+      updatedBy: 'Hugo David-Boyet',
+      updatedDate: '10/16/2019',
+      href: 'https://github.com/facebook/create-react-app/edit/master/docusaurus/docs/code-splitting.md',
+      nextTitle: 'Установка зависимости',
+      nextHref: 'installing-a-dependency',
+      previousTitle: 'Использование общей папки',
+      previousHref: 'using-the-public-folder',
+    },
   ];
 
-  const dataForCertainChapter = chapterData.find(
-    (item) => item.slug === location.pathname
-  );
+  const dataForCertainChapter = chapterData.find((item) => item.slug === location.pathname);
 
   return (
     <MainStyled>
@@ -166,10 +261,35 @@ const Main = () => {
             <UpdatingToNewReleases />
           </Route>
 
-
-          <Route path='/editor-setup/'>
+          <Route path='/setting-up-your-editor/'>
             <EditorSetup />
           </Route>
+
+          <Route path='/developing-components-in-isolation/'>
+            <DevelopingComponentsInIsolation />
+          </Route>
+
+          <Route path='/analyzing-the-bundle-size/'>
+            <AnalyzingTheBundleSize />
+          </Route>
+
+          <Route path='/using-https-in-development/'>
+            <UsingHttpsInDevelopment />
+          </Route>
+
+          <Route path='/adding-a-stylesheet/'>
+            <AddingStylesheets />
+          </Route>
+
+          <Route path='/adding-a-css-modules-stylesheet/'>
+            <AddingCSSModules />
+          </Route>
+
+          <Route path='/adding-a-sass-stylesheet/'>
+            <AddingSassStylesheets />
+          </Route>
+
+
 
           <Route path='/' exact>
             <Redirect to='/getting-started/' />

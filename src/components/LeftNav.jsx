@@ -27,7 +27,7 @@ const LeftNav = ({ headerHeight }) => {
     {
       groupName: 'Разработка',
       chapters: [
-        { name: 'Настройки редактора кода', href: '/editor-setup/' },
+        { name: 'Настройки редактора кода', href: '/setting-up-your-editor/' },
         {
           name: 'Разработка компонентов в изоляции',
           href: '/developing-components-in-isolation/',
@@ -37,6 +37,42 @@ const LeftNav = ({ headerHeight }) => {
         {
           name: 'Использование HTTPS в разработке',
           href: '/using-https-in-development/',
+        },
+      ],
+    },
+    {
+      groupName: 'Cтили и ценные качества',
+      chapters: [
+        { name: 'Добавление таблиц стилей', href: '/adding-a-stylesheet/' },
+        {
+          name: 'Добавление модулей CSS',
+          href: '/adding-a-css-modules-stylesheet/',
+        },
+        { name: 'Добавление таблиц стилей Sass', href: '/adding-a-sass-stylesheet/' },
+
+        {
+          name: 'Добавление CSS Reset',
+          href: '/adding-css-reset/',
+        },
+        {
+          name: 'Постобработка CSS',
+          href: '/post-processing-css/',
+        },
+        {
+          name: 'Добавление изображений, шрифтов и файлов',
+          href: '/adding-images-fonts-and-files/',
+        },
+        {
+          name: 'Загрузка файлов .graphql',
+          href: '/loading-graphql-files/',
+        },
+        {
+          name: 'Использование общей папки',
+          href: '/using-the-public-folder/',
+        },
+        {
+          name: 'Разделение кода',
+          href: '/code-splitting/',
         },
       ],
     },
