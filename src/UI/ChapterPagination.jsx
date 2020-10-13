@@ -12,7 +12,7 @@ const ChapterPagination = ({
     <ChapterPaginationStyled>
       <div className='paginationContainer paginationContainer-previous'>
         {previousHref && previousTitle && (
-          <Link to={'/' + previousHref + '/'} className='pagination-link'>
+          <Link to={'/' + previousHref} className='pagination-link'>
             <p>Предыдущий раздел</p>
             <p className='chapterTitle'>{'« ' + previousTitle}</p>
           </Link>
@@ -21,7 +21,7 @@ const ChapterPagination = ({
 
       <div className='paginationContainer paginationContainer-next'>
         {nextHref && nextTitle && (
-          <Link to={'/' + nextHref + '/'} className='pagination-link'>
+          <Link to={'/' + nextHref} className='pagination-link'>
             <p>Следующий раздел</p>
             <p className='chapterTitle'>{nextTitle + ' »'}</p>
           </Link>

@@ -78,17 +78,18 @@ const NavMenuGroupStyled = styled.li`
       content: ' ';
       position: absolute;
       right: 16px;
+      top: 50%;
 
       height: 20px;
       width: 20px;
 
       background-image: ${({ theme }) => theme.color.navLeftSvg};
       background-size: 32px 32px;
-      background-position: 50%;
+      background-position: 50% 50%;
 
       transition: all 0.2s ease;
-      transform: ${({ isChaptersShown }) =>
-        isChaptersShown ? 'scaleY(-1)' : 'scaleY(1)'};
+      transform: ${({ isChaptersShown }) => 
+        isChaptersShown ? 'rotate(180deg) translateY(50%)' : 'rotate(0deg) translateY(-50%)'};
     }
   }
 `;

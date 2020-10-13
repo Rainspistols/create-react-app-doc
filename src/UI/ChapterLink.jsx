@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled/macro';
-import { Link } from 'react-router-dom';
+
+import { HashLink as Link } from 'react-router-hash-link';
 
 const ChapterLink = ({ children, href, isLink }) => {
   return isLink ? (

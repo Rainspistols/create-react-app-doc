@@ -22,7 +22,7 @@ const EditorSetup = () => {
         и следуйте инструкциям. Охвачены некоторые из самых популярных редакторов.
       </p>
 
-      <ChapterTitle href='displaying-lint-output-in-the-editor'>Отображение вывода Lint в редакторе</ChapterTitle>
+      <ChapterTitle anchorId='displaying-lint-output-in-the-editor'>Отображение вывода Lint в редакторе</ChapterTitle>
 
       <blockquote>
         Примечание: эта функция доступна в <code> response-scripts@0.2.0 </code> {''}и выше.

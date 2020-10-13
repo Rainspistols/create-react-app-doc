@@ -35,7 +35,9 @@ const UsingHttpsInDevelopment = () => {
         <span>Windows (Powershell)</span>
       </ChapterTitle>
 
-      <p>($env:HTTPS = "true") -and (npm start)</p>
+      <CodeBlock>
+        <span>($env:HTTPS = "true") -and (npm start)</span>
+      </CodeBlock>
 
       <ChapterTitle anchorId='Linux,-macOS-(Bash)'>Linux, macOS (Bash)</ChapterTitle>
 
@@ -55,7 +57,7 @@ const UsingHttpsInDevelopment = () => {
       <p>
         Чтобы установить собственный сертификат, установите в переменных среды <code>SSL_CRT_FILE</code> и{' '}
         <code>SSL_KEY_FILE</code> путь к файлам сертификата и ключей, как вы это делали для <code>HTTPS</code> выше.
-        Обратите внимание, что вам также необходимо установить <code>HTTPS = true</code>.
+        Обратите внимание, что вам также необходимо установить <code>HTTPS=true</code>.
       </p>
 
       <ChapterTitle anchorId='Linux,-macOS-(Bash)-for-custom-SSL' as='h3'>
