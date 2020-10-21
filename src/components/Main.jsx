@@ -33,6 +33,7 @@ import AddingCustomEnvironmentVariables from './chapters/AddingCustomEnvironment
 import MakingAProgressiveWebApp from './chapters/MakingAProgressiveWebApp';
 import ProductionBuild from './chapters/ProductionBuild';
 import RunningTests from './chapters/RunningTests';
+import DebuggingTests from './chapters/DebuggingTests';
 
 const Main = () => {
   const location = useLocation();
@@ -522,8 +523,12 @@ const Main = () => {
             <RunningTests />
           </Route>
 
+          <Route path='/debugging-tests/'>
+            <DebuggingTests />
+          </Route>
+
           <Route path='/' exact>
-            <Redirect to='/getting-started/' />
+            <Redirect to='/getting-started' />
           </Route>
         </Switch>
       </ChapterWrapper>

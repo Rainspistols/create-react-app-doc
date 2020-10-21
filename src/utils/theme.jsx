@@ -1,6 +1,6 @@
 const defaultThemeProps = {
   media: {
-    tablet: '@media(min-width: 768px)',
+    mobile: '@media(max-width: 999px)',
     desktop: '@media(min-width: 1280px)',
   },
   flex: {
